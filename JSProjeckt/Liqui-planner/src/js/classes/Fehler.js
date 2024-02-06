@@ -8,8 +8,7 @@ class Fehler {
         this._html = this._html_generieren();
     }
 
-    _html_generieren () {
-
+    _html_generieren() {
         let fehlerbox = document.createElement("div");
         fehlerbox.setAttribute("class", "fehlerbox");
 
@@ -26,29 +25,22 @@ class Fehler {
         fehlerbox.insertAdjacentElement("beforeend", fehlerliste);
 
         return fehlerbox;
-
     }
 
-    _entfernen(){
-
+    _entfernen() {
         let bestehende_fehlerbox = document.querySelector(".fehlerbox");
         if (bestehende_fehlerbox !== null) {
             bestehende_fehlerbox.remove();
         }
     }
 
-    anzeigen(){
-
+    anzeigen() {
         this._entfernen();
         let eingabeformular_container = document.querySelector("#eingabeformular-container");
         if (eingabeformular_container !== null) {
             eingabeformular_container.insertAdjacentElement("afterbegin", this._html);
         }
-
     }
-
-
-
 
     
 }

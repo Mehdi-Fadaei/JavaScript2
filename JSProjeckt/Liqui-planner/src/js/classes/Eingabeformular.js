@@ -59,14 +59,13 @@ class Eingabeformular {
                 e.target.reset();
                 this._datum_aktualisieren();
             } else {
-                let fehler = new Fehler("Folgender Felder wurde nicht korrekt ausgefüllt:", formular_fehler);
+                let fehler = new Fehler("Folgende Felder wurden nicht korrekt ausgefüllt:", formular_fehler);
                 fehler.anzeigen();
             }   
         });
     }
 
     _html_generieren() {
-
         let eingabeformular = document.createElement("section");
         eingabeformular.setAttribute("id", "eingabeformular-container");
         eingabeformular.innerHTML = `<form id="eingabeformular" action="#" method="get"></form>
