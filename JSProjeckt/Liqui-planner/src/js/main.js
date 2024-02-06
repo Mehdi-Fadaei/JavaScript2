@@ -1,5 +1,9 @@
 "use strict";
 
+let navigationsleiste = new Navigationsleiste();
+navigationsleiste.anzeigen();
+
+let eingabeformular = new Eingabeformular();
 eingabeformular.anzeigen();
-// haushaltsbuch.eintrag_hinzufuegen();
-// console.log(haushaltsbuch);
+
+let haushaltsbuch = new Haushaltsbuch();
